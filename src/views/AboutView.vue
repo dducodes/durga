@@ -19,7 +19,7 @@
         </div> -->
         <div class="md:w-11/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1 text-base">
-            Hi everyone! I'm Durga D/O Chandrasekaran, a sophomore pursuing a degree in Computer Science
+            Hi everyone! I'm Durga Chandrasekaran, a penultimate student pursuing a degree in Computer Science
             at Singapore Management University. Driven by a passion for Product Management, Smart-City Management,
             and Artificial Intelligence, I aim to leverage technology to address some of the world’s most
             pressing challenges, including sustainability and climate change. Whether it’s designing solutions for

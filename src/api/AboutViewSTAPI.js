@@ -25,14 +25,14 @@ export default {
           id: 4,
           name: 'ReactJS',
           imageUrl: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
-          status: 'Beginner'
+          status: 'Intermediate'
 
         },
         {
           id: 5,
           name: 'NodeJS',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png',
-          status: 'Beginner'
+          status: 'Intermediate'
         },
         {
           id: 6,
@@ -44,13 +44,13 @@ export default {
           id: 7,
           name: 'C',
           imageUrl: '/skills img/CLogo.svg',
-          status: 'Intermediate'
+          status: 'Beginner'
         },
         {
           id: 8,
           name: 'Python',
           imageUrl: '/skills img/python.svg',
-          status: 'Beginner'
+          status: 'Intermediate'
         }
       ],
       tools: [
@@ -68,15 +68,39 @@ export default {
         },
         {
           id: 3,
+          name: 'GitLab',
+          imageUrl: '/skills img/gitlab.svg',
+          status: 'Git Hosting'
+        },
+        {
+          id: 4,
           name: 'NPM',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-npm-3-1175132.png',
           status: 'Package Manager'
         },
         {
-          id: 4,
+          id: 5,
           name: 'MySQL',
           imageUrl: '/skills img/mySQLLogo.svg',
           status: 'Database'
+        },
+        {
+          id: 6,
+          name: 'MongoDB',
+          imageUrl: '/skills img/mongodb.svg',
+          status: 'Database'
+        },
+        {
+          id: 7,
+          name: 'Docker',
+          imageUrl: '/skills img/docker.svg',
+          status: 'Containerisation'
+        },
+        {
+          id: 8,
+          name: 'Kubernetes',
+          imageUrl: '/skills img/kubernets.svg',
+          status: 'Orchestration'
         },
       ]
     };

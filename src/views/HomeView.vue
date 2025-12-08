@@ -11,11 +11,11 @@
           <span class="wrap">{{ txt }}</span>
         </h1>
       </div>
-      <p class="text-white pr-4 fade-in-from-left">Welcome to My Personal Website! <span class="wave">👋🏼</span></p>
+      <p class="text-white pr-4 fade-in-from-left">Welcome to My Website! <span class="wave">👋🏼</span></p>
       <br>
     </div>
     <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-        class="w-10/12 md:h-auto rounded-full border-4 border-blue-300 pict" src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg">
+        class="w-96 h-96 rounded-full object-cover border-4 border-blue-300 pict" src="/personal assests/Durga_Chandrasekaran_Photo.jpg">
     </div>
   </main>
 </template>

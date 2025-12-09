@@ -1,6 +1,6 @@
 <template>
     <div class="icon-container">
-        <a :href="$baseUrl + 'personal-assests/Durga_DO_Chandrasekaran_Resume.pdf'" download="Durga_Chandrasekaran_Resume" class="icon" title="Resume">
+        <a @click="downloadResume" class="icon" title="Resume" style="cursor: pointer;">
             <img :src="$baseUrl + 'skills-img/Resume.svg'"/> 
         </a>
         <a href="mailto:durgabgf@gmail.com" target="_blank" class="icon" title="Email">
@@ -18,6 +18,16 @@
 <script>
 export default {
     name: "SocialIcons",
+    methods: {
+        downloadResume() {
+            const link = document.createElement('a');
+            link.href = this.$baseUrl + 'personal-assests/Durga_DO_Chandrasekaran_Resume.pdf';
+            link.download = 'Durga_Chandrasekaran_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
 };
 </script>
 

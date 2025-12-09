@@ -3,7 +3,7 @@
         <a :href="$baseUrl + 'personal-assests/Durga_DO_Chandrasekaran_Resume.pdf'" download="Durga_Chandrasekaran_Resume" class="icon" title="Resume">
             <img :src="$baseUrl + 'skills-img/Resume.svg'"/> 
         </a>
-        <a href="mailto:durgac.d.2023@scis.smu.edu.sg.com" target="_blank" class="icon" title="Email">
+        <a href="mailto:durgabgf@gmail.com" target="_blank" class="icon" title="Email">
             <img :src="$baseUrl + 'skills-img/Email.svg'" />
         </a>
         <a href="https://www.linkedin.com/in/durga-chandrasekaran/" target="_blank" class="icon" title="LinkedIn">

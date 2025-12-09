@@ -18,7 +18,7 @@ export default {
         {
           id: 3,
           name: 'Javascript',
-          imageUrl: '/skills img/JavaScriptLogo.svg',
+          imageUrl: '/skills-img/JavaScriptLogo.svg',
           status: 'Intermediate'
         },
         {
@@ -37,19 +37,19 @@ export default {
         {
           id: 6,
           name: 'Java',
-          imageUrl: '/skills img/JavaLogo.svg',
+          imageUrl: '/skills-img/JavaLogo.svg',
           status: 'Intermediate'
         },
         {
           id: 7,
           name: 'C',
-          imageUrl: '/skills img/CLogo.svg',
+          imageUrl: '/skills-img/CLogo.svg',
           status: 'Beginner'
         },
         {
           id: 8,
           name: 'Python',
-          imageUrl: '/skills img/python.svg',
+          imageUrl: '/skills-img/python.svg',
           status: 'Intermediate'
         }
       ],
@@ -63,13 +63,13 @@ export default {
         {
           id: 2,
           name: 'GitHub',
-          imageUrl: '/skills img/github.svg',
+          imageUrl: '/skills-img/github.svg',
           status: 'Git Hosting'
         },
         {
           id: 3,
           name: 'GitLab',
-          imageUrl: '/skills img/gitlab.svg',
+          imageUrl: '/skills-img/gitlab.svg',
           status: 'Git Hosting'
         },
         {
@@ -81,25 +81,25 @@ export default {
         {
           id: 5,
           name: 'MySQL',
-          imageUrl: '/skills img/mySQLLogo.svg',
+          imageUrl: '/skills-img/mySQLLogo.svg',
           status: 'Database'
         },
         {
           id: 6,
           name: 'MongoDB',
-          imageUrl: '/skills img/mongodb.svg',
+          imageUrl: '/skills-img/mongodb.svg',
           status: 'Database'
         },
         {
           id: 7,
           name: 'Docker',
-          imageUrl: '/skills img/docker.svg',
+          imageUrl: '/skills-img/docker.svg',
           status: 'Containerisation'
         },
         {
           id: 8,
           name: 'Kubernetes',
-          imageUrl: '/skills img/kubernets.svg',
+          imageUrl: '/skills-img/kubernets.svg',
           status: 'Orchestration'
         },
       ]

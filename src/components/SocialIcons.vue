@@ -1,16 +1,16 @@
 <template>
     <div class="icon-container">
-        <a href="/personal assests/Durga_DO_Chandrasekaran_Resume.pdf" download="Durga_Chandrasekaran_Resume" class="icon" title="Resume">
-            <img src="/skills-img/Resume.svg"/> 
+        <a :href="$baseUrl + 'personal assests/Durga_DO_Chandrasekaran_Resume.pdf'" download="Durga_Chandrasekaran_Resume" class="icon" title="Resume">
+            <img :src="$baseUrl + 'skills-img/Resume.svg'"/> 
         </a>
         <a href="mailto:durgac.d.2023@scis.smu.edu.sg.com" target="_blank" class="icon" title="Email">
-            <img src="/skills-img/Email.svg" />
+            <img :src="$baseUrl + 'skills-img/Email.svg'" />
         </a>
         <a href="https://www.linkedin.com/in/durga-chandrasekaran/" target="_blank" class="icon" title="LinkedIn">
-            <img src="/skills-img/LinkedIn.svg" />
+            <img :src="$baseUrl + 'skills-img/LinkedIn.svg'" />
         </a>
         <a href="https://github.com/dducodes" target="_blank" class="icon" title="Github">
-            <img src="/skills-img/Github2.svg" />
+            <img :src="$baseUrl + 'skills-img/Github2.svg'" />
         </a>
     </div>
 </template>

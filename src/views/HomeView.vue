@@ -15,7 +15,7 @@
       <br>
     </div>
     <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-        class="w-96 h-96 rounded-full object-cover border-4 border-blue-300 pict" :src="publicPath + 'personal-assests/Durga_Chandrasekaran_Photo.jpg'">
+        class="w-96 h-96 rounded-full object-cover border-4 border-blue-300 pict" :src="$baseUrl + 'personal-assests/Durga_Chandrasekaran_Photo.jpg'">
     </div>
   </main>
 </template>
@@ -26,12 +26,7 @@ import Typewriter from "../api/HomeViewAPI";
 
 export default {
   name: "HomeViewAPI",
-  mixins: [Typewriter],
-  data() {
-    return {
-      publicPath: process.env.BASE_URL
-    }
-  }
+  mixins: [Typewriter]
 };
 </script>
 

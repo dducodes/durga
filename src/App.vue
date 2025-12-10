@@ -1,23 +1,35 @@
 <template>
   <div class="max-w-7xl mx-auto flex flex-col relative">
 
-    <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80 relative">
+    <!-- Mobile Header: Hamburger + GitHub Icon only -->
+    <div class="md:hidden fixed top-0 left-0 right-0 z-[98] px-5 py-3 bg-[#121212] bg-opacity-80 backdrop-blur-md flex items-center justify-between">
+      <button @click="mobileMenu = !mobileMenu" aria-label="Toggle menu" class="p-2 rounded-md text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <a href="https://github.com/dducodes" target="_blank"><img class="w-8 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github"></a>
+    </div>
+
+    <!-- Mobile menu dropdown -->
+    <div v-if="mobileMenu" class="md:hidden fixed left-0 right-0 top-14 bg-[#121212] bg-opacity-95 z-50">
+      <ul class="flex flex-col p-4 space-y-2 text-white">
+        <li><router-link @click="mobileMenu = false" to="/" class="block py-2">Home</router-link></li>
+        <li><router-link @click="mobileMenu = false" to="/about" class="block py-2">About</router-link></li>
+        <li><router-link @click="mobileMenu = false" to="/portfolio" class="block py-2">Portfolio</router-link></li>
+        <li><router-link @click="mobileMenu = false" to="/experience" class="block py-2">Experience</router-link></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80 relative px-5 py-3">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <div class="flex md:order-2 fadein-bot"> 
           <a href="https://github.com/dducodes" target="_blank"><img class="w-9 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github"></a>
         </div>
 
-        <!-- mobile hamburger -->
-        <div class="md:hidden flex items-center">
-          <button @click="mobileMenu = !mobileMenu" aria-label="Toggle menu" class="p-2 rounded-md text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="hidden md:flex justify-center items-center flex-1 md:order-none" id="mobile-menu-3">
-          <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+        <div class="flex justify-center items-center flex-1 md:order-none" id="mobile-menu-3">
+          <ul class="flex-row flex md:space-x-8 md:text-sm md:font-medium">
             <li>
               <router-link to="/"
                 class="fadein-bot text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0"
@@ -37,20 +49,10 @@
             </li>
           </ul>
         </div>
-
-        <!-- mobile menu dropdown -->
-        <div v-if="mobileMenu" class="md:hidden absolute left-0 right-0 top-full bg-[#121212] bg-opacity-95 z-50">
-          <ul class="flex flex-col p-4 space-y-2 text-white">
-            <li><router-link @click="mobileMenu = false" to="/" class="block py-2">Home</router-link></li>
-            <li><router-link @click="mobileMenu = false" to="/about" class="block py-2">About</router-link></li>
-            <li><router-link @click="mobileMenu = false" to="/portfolio" class="block py-2">Portfolio</router-link></li>
-            <li><router-link @click="mobileMenu = false" to="/experience" class="block py-2">Experience</router-link></li>
-          </ul>
-        </div>
       </div>
     </nav>
 
-    <div class="md:mt-[100px]">
+    <div class="md:mt-[100px] pt-14 md:pt-0">
       <router-view />
     </div>
   </div>

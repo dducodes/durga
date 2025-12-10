@@ -16,7 +16,7 @@
               <div
                 class="item-card flex flex-col items-center gap-2 rounded bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-blue-300 md:gap-3 px-5 py-5 lg:px-5 ">
                 <div class="flex h-12 w-12 items-center justify-center p-0 h-full w-full lg:p-0 zoom-in">
-                  <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl"
+                  <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl w-20 h-20 md:w-32 md:h-32 object-cover"
                     :src="$baseUrl + 'portfolio-img/' + item.imageUrl + '.png'">
                 </div>
                 <div class="w-full flex flex-col gap-2 items-center text-sm md:text-base lg:text-lg">

@@ -1,10 +1,19 @@
 <template>
   <div class="max-w-7xl mx-auto flex flex-col relative">
 
-    <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
+    <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80 relative">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <div class="flex md:order-2 fadein-bot"> 
           <a href="https://github.com/dducodes" target="_blank"><img class="w-9 rounded-full" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github"></a>
+        </div>
+
+        <!-- mobile hamburger -->
+        <div class="md:hidden flex items-center">
+          <button @click="mobileMenu = !mobileMenu" aria-label="Toggle menu" class="p-2 rounded-md text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
 
         <div class="hidden md:flex justify-center items-center flex-1 md:order-none" id="mobile-menu-3">
@@ -28,6 +37,16 @@
             </li>
           </ul>
         </div>
+
+        <!-- mobile menu dropdown -->
+        <div v-if="mobileMenu" class="md:hidden absolute left-0 right-0 top-full bg-[#121212] bg-opacity-95 z-50">
+          <ul class="flex flex-col p-4 space-y-2 text-white">
+            <li><router-link @click="mobileMenu = false" to="/" class="block py-2">Home</router-link></li>
+            <li><router-link @click="mobileMenu = false" to="/about" class="block py-2">About</router-link></li>
+            <li><router-link @click="mobileMenu = false" to="/portfolio" class="block py-2">Portfolio</router-link></li>
+            <li><router-link @click="mobileMenu = false" to="/experience" class="block py-2">Experience</router-link></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -36,27 +55,23 @@
     </div>
   </div>
   <footer class="block md:hidden fixed bottom-0 left-0 right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-80 backdrop-blur-md backdrop-opacity-90">
-  <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
+  <nav class="max-w-7xl px-5 z-[98] w-screen">
     <div class="container mx-auto flex items-center justify-between">
 
-      <!-- CENTER MENU -->
-      <div class="hidden md:flex justify-center items-center flex-1" id="mobile-menu-3">
-        <ul class="flex md:space-x-8 md:text-sm md:font-medium">
+      <!-- CENTER MENU (mobile) -->
+      <div class="flex md:hidden justify-center items-center flex-1" id="mobile-menu-3">
+        <ul class="flex space-x-6 md:space-x-8 md:text-sm md:font-medium text-white">
           <li>
-            <router-link to="/"
-              class="fadein-bot text-gray-300 hover:text-white">Home</router-link>
+            <router-link to="/" class="fadein-bot">Home</router-link>
           </li>
           <li>
-            <router-link to="/about"
-              class="fadein-bot fadein-1 text-gray-300 hover:text-white">About</router-link>
+            <router-link to="/about" class="fadein-bot fadein-1">About</router-link>
           </li>
           <li>
-            <router-link to="/portfolio"
-              class="fadein-bot fadein-2 text-gray-300 hover:text-white">Portfolio</router-link>
+            <router-link to="/portfolio" class="fadein-bot fadein-2">Portfolio</router-link>
           </li>
           <li>
-            <router-link to="/experience"
-              class="fadein-bot fadein-3 text-gray-300 hover:text-white">Experience</router-link>
+            <router-link to="/experience" class="fadein-bot fadein-3">Experience</router-link>
           </li>
         </ul>
       </div>
@@ -76,6 +91,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      mobileMenu: false
+    }
+  },
   methods: {
     redirectToHome() {
       this.$router.push('/')
@@ -117,7 +137,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 nav {

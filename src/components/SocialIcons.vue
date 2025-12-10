@@ -1,16 +1,16 @@
 <template>
     <div class="icon-container">
         <a @click="downloadResume" class="icon" title="Resume" style="cursor: pointer;">
-            <img :src="$baseUrl + 'skills-img/Resume.svg'"/> 
+            <img class="w-6 h-6 md:w-8 md:h-8" :src="$baseUrl + 'skills-img/Resume.svg'"/> 
         </a>
         <a href="mailto:durgabgf@gmail.com" target="_blank" class="icon" title="Email">
-            <img :src="$baseUrl + 'skills-img/Email.svg'" />
+            <img class="w-6 h-6 md:w-8 md:h-8" :src="$baseUrl + 'skills-img/Email.svg'" />
         </a>
         <a href="https://www.linkedin.com/in/durga-chandrasekaran/" target="_blank" class="icon" title="LinkedIn">
-            <img :src="$baseUrl + 'skills-img/LinkedIn.svg'" />
+            <img class="w-6 h-6 md:w-8 md:h-8" :src="$baseUrl + 'skills-img/LinkedIn.svg'" />
         </a>
         <a href="https://github.com/dducodes" target="_blank" class="icon" title="Github">
-            <img :src="$baseUrl + 'skills-img/Github2.svg'" />
+            <img class="w-6 h-6 md:w-8 md:h-8" :src="$baseUrl + 'skills-img/Github2.svg'" />
         </a>
     </div>
 </template>
@@ -59,8 +59,9 @@ export default {
     font-size: 24px;
 }
 
-img {
-    width: 30px;
-    height: 30px;
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 </style>

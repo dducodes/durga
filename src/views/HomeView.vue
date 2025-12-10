@@ -14,8 +14,9 @@
       <p class="text-white pr-4 fade-in-from-left">Welcome to My Website! <span class="wave">👋🏼</span></p>
       <br>
     </div>
-    <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-        class="w-96 h-96 rounded-full object-cover border-4 border-blue-300 pict" :src="$baseUrl + 'personal-assests/Durga_Chandrasekaran_Photo.jpg'">
+    <div class="flex justify-center md:justify-start fadein-right">
+      <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
+        class="w-48 h-48 md:w-96 md:h-96 rounded-full object-cover border-4 border-blue-300 pict" :src="$baseUrl + 'personal-assests/Durga_Chandrasekaran_Photo.jpg'">
     </div>
   </main>
 </template>

@@ -35,6 +35,7 @@ export default {
 .icon-container {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .icon {
@@ -76,5 +77,9 @@ export default {
     width: 26px;
     height: 26px;
   }
+}
+
+@media (max-width: 360px) {
+    .icon-container { gap: 12px; }
 }
 </style>

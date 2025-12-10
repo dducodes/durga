@@ -59,9 +59,22 @@ export default {
     font-size: 24px;
 }
 
+/* revert to original icon image sizing: 30x30 by default */
 .icon img {
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
+}
+
+/* slightly smaller icons on narrow mobile screens */
+@media (max-width: 420px) {
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+  .icon img {
+    width: 26px;
+    height: 26px;
+  }
 }
 </style>
